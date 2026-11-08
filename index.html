@@ -1,0 +1,655 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Virat Kohli | The King of Cricket</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fa;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+
+        header {
+            background: #101c3b;
+            padding: 18px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav h2 {
+            color: #f5c542;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav ul a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul a:hover {
+            color: #f5c542;
+        }
+
+        /* Hero Section */
+
+        .hero {
+            min-height: 550px;
+            padding: 65px 8%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 40px;
+            background: linear-gradient(135deg, #101c3b, #203f79);
+            color: white;
+        }
+        .hero img {
+            width: 320px;
+            height: 400px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 15px;
+            border: 5px solid #f5c542;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .hero-content {
+            max-width: 550px;
+        }
+
+        .hero-content h4 {
+            color: #f5c542;
+            letter-spacing: 3px;
+        }
+
+        .hero-content h1 {
+            font-size: 52px;
+            margin: 15px 0;
+            color: white;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: #e0e6f0;
+        }
+
+        .personal-life img {
+            width: 320px;
+            height: 400px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 10px;
+            border: 5px solid #f5c542;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #f5c542;
+            color: #101c3b;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        /* General Sections */
+
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            color: #101c3b;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            text-align: center;
+        }
+
+        /* About */
+
+        .about {
+            background: white;
+        }
+
+        .about p {
+            max-width: 950px;
+            margin: 0 auto 18px;
+            text-align: justify;
+        }
+
+        /* Achievements */
+
+        .achievements {
+            background: #e9edf5;
+        }
+
+        .achievement-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+        .personal-life {
+            text-align: center;
+        }
+        .personal-life img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 10px #f5c542;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            border-top: 5px solid #f5c542;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card h3 {
+            color: #203f79;
+            margin-bottom: 12px;
+        }
+
+        /* Career Timeline */
+
+        .timeline {
+            max-width: 850px;
+            margin: auto;
+            border-left: 4px solid #f5c542;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            background: #203f79;
+            border-radius: 50%;
+            position: absolute;
+            left: -40px;
+            top: 8px;
+        }
+
+        .timeline-item h3 {
+            color: #203f79;
+        }
+
+        .timeline-item p {
+            color: #555;
+        }
+
+        .year {
+            color: #a47708;
+            font-weight: bold;
+        }
+
+        /* Quote */
+
+        .quote {
+            background: #101c3b;
+            color: white;
+            text-align: center;
+        }
+
+        .quote h2 {
+            color: #f5c542;
+        }
+
+        .quote blockquote {
+            max-width: 850px;
+            margin: auto;
+            font-size: 25px;
+            font-style: italic;
+        }
+
+        .quote p {
+            margin-top: 20px;
+            color: #f5c542;
+            font-weight: bold;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #080f22;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer a {
+            color: #f5c542;
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .hero img {
+                width: 260px;
+                height: 320px;
+            }
+
+            .achievement-container {
+                grid-template-columns: 1fr;
+            }
+            .personal-life img {
+                width: 100%;
+                height: auto;
+            }
+
+            section {
+                padding: 50px 6%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <header>
+        <nav>
+            <h2>VIRAT KOHLI</h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#timeline">Career</a></li>
+                <li><a href="#personal-life">Personal Life</a></li>
+                <li><a href="#quote">Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h4>THE KING OF CRICKET</h4>
+
+            <h1>Virat Kohli</h1>
+
+            <p>
+                A legendary Indian cricketer known for his passion,
+                consistency, determination and incredible batting
+                performances. Virat Kohli has inspired millions
+                through his dedication and commitment to cricket.
+            </p>
+
+            <a href="#about" class="btn">
+                Explore His Journey
+            </a>
+
+        </div>
+
+        <img
+            src="https://i.pinimg.com/736x/2d/54/e2/2d54e22f1764ccfbda5ea3edac3a3673.jpg"
+            alt="Virat Kohli"
+        >
+
+    </section>
+
+
+    <!-- About Section -->
+
+    <section class="about" id="about">
+
+        <div class="section-title">
+            <h2>About Virat Kohli</h2>
+        </div>
+
+        <p>
+            Virat Kohli was born on 5 November 1988 in Delhi, India.
+            From a young age, he showed a strong interest in cricket.
+            With the support of his family, he joined the West Delhi
+            Cricket Academy and began developing his cricketing skills.
+        </p>
+
+        <p>
+            He became well known after leading the Indian Under-19
+            cricket team to victory in the 2008 ICC Under-19 Cricket
+            World Cup. His impressive performance helped him earn
+            a place in the Indian senior cricket team.
+        </p>
+
+        <p>
+            Virat made his international debut for India in 2008.
+            Through hard work, discipline and consistent performances,
+            he established himself as one of the greatest batters
+            in modern cricket.
+        </p>
+
+        <p>
+            He captained the Indian cricket team across formats and
+            became known for his aggressive leadership, fitness,
+            competitive attitude and match-winning performances.
+        </p>
+
+        <p>
+            Beyond cricket, Virat Kohli is admired for his fitness
+            journey, charitable initiatives and influence on young
+            athletes around the world.
+        </p>
+
+    </section>
+
+
+    <!-- Achievements Section -->
+
+    <section class="achievements" id="achievements">
+
+        <div class="section-title">
+            <h2>Major Achievements</h2>
+        </div>
+
+        <div class="achievement-container">
+
+            <div class="card">
+                <h3>2011 World Cup</h3>
+                <p>
+                    Was part of the Indian team that won the
+                    ICC Cricket World Cup in 2011.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>2013 Champions Trophy</h3>
+                <p>
+                    Played an important role in India's
+                    ICC Champions Trophy victory in 2013.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>2018 Test Series</h3>
+                <p>
+                    Led India to its first-ever Test series
+                    victory in Australia during the 2018–19 tour.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>2023 World Cup</h3>
+                <p>
+                    Scored a record 765 runs in the 2023
+                    ICC Cricket World Cup and won Player of the Tournament.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>2024 T20 World Cup</h3>
+                <p>
+                    Played a match-winning role in India's
+                    2024 ICC Men's T20 World Cup final victory.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>IPL Champion 2025</h3>
+                <p>
+                    Was part of Royal Challengers Bengaluru's
+                    historic maiden IPL title-winning team in 2025.
+                    He scored 657 runs in that season and the leading run-scorer to the team.
+                </p>
+            </div>
+            <div class="card">
+                <h3>IPL Champion 2026</h3>
+                <p>
+                    Was part of Royal Challengers Bengaluru's
+                    team that won their Back-to-Back IPL title in 2026.
+                    He scored 675 runs in that season and the leading run-scorer to the team.
+                    Played a match-winning role in the final against Gujarat Titans.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Career Timeline -->
+
+    <section id="timeline">
+
+        <div class="section-title">
+            <h2>Career Timeline</h2>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <p class="year">1988</p>
+                <h3>Birth</h3>
+                <p>
+                    Born on 5 November in Delhi, India.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <p class="year">2006</p>
+                <h3>Domestic Cricket</h3>
+                <p>
+                    Made his first-class debut for Delhi.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <p class="year">2008</p>
+                <h3>Under-19 World Cup</h3>
+                <p>
+                    Captained India to victory in the
+                    ICC Under-19 Cricket World Cup.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <p class="year">2008</p>
+                <h3>International Debut</h3>
+                <p>
+                    Made his ODI debut for India against Sri Lanka.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <p class="year">2011</p>
+                <h3>World Cup Champion</h3>
+                <p>
+                    Helped India win the ICC Cricket World Cup.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <p class="year">2013</p>
+                <h3>First ODI Double Century Milestone</h3>
+                <p>
+                    Established himself as a leading international
+                    batter and won major individual recognition.
+                </p>
+            </div>
+            <div class="timeline-item">
+                <p class="year">2016</p>
+                <h3>Most runs in IPL season</h3>
+                <p>
+                    Scored 973 runs in single edition of IPL, the highest in a single season.
+                    Remains unbeaten till date.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <p class="year">2017</p>
+                <h3>India Captain</h3>
+                <p>
+                    Became India's full-time captain across formats.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <p class="year">2023</p>
+                <h3>World Cup Record</h3>
+                <p>
+                    Scored 765 runs in the 2023 ODI World Cup.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <p class="year">2024</p>
+                <h3>T20 World Cup Champion</h3>
+                <p>
+                    Helped India win the 2024 T20 World Cup.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <p class="year">2025</p>
+                <h3>IPL Champion</h3>
+                <p>
+                    Won his first IPL title with Royal Challengers Bengaluru.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="Personal life" id="personal-life">
+        <div class="container">
+        <h2>Personal Life</h2>
+        <img src="https://i.pinimg.com/1200x/24/41/dd/2441ddeb22191869f718c688f3749985.jpg" alt="Virat Kohli and Anushka Sharma">
+        
+        
+        <p>
+            Virat Kohli married popular Bollywood actress Anushka Sharma on 11 December 2017 in a private wedding ceremony in Tuscany, Italy. Their relationship is popularly known as "Virushka". They first met during an advertisement shoot in 2013 and gradually developed a close relationship. Over the years, they have supported each other's professional careers and shared many important moments in their personal lives. Their relationship is admired by many fans across the world.
+
+Virat and Anushka have two children. Their daughter, Vamika Kohli, was born on 11 January 2021, and their son, Akaay Kohli, was born on 15 February 2024. The couple values family privacy and generally keeps their children away from excessive media attention. Virat often expresses the importance of family, love and maintaining a balance between professional responsibilities and personal life.
+
+        </p>
+    </section>
+
+    <!-- Inspirational Quote -->
+
+    <section class="quote" id="quote">
+
+        <h2>Inspirational Quote</h2>
+
+        <blockquote>
+            "There is a one percent chance, and sometimes that chance is good enough. But what matters is what you think about that one percent. Are you willing to give absolutely everything that you have to make that one into 10 and then grow that 10 into 30? Eventually something magical might come out of it."
+        </blockquote>
+
+        <p>— Virat Kohli</p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            Tribute Page dedicated to Virat Kohli.
+        </p>
+
+        <p>
+            Created as a Web Development & Designing
+            Internship Project.
+        </p>
+        <div class="container"></div>
+            <p>
+                References:
+                <a href="https://www.bcci.tv/" target="_blank">
+                    BCCI
+                </a>
+                |
+                <a href="https://www.iplt20.com/" target="_blank">
+                    IPL
+                </a>
+                |
+                <a href="https://en.wikipedia.org/wiki/Virat_Kohli" target="_blank">
+                    wikipedia
+            </a>    
+        </p>
+
+        <p>© 2026 | Virat Kohli Tribute Page</p>
+
+    </footer>
+
+</body>
+</html>
